@@ -4,9 +4,9 @@ I secured 66th rank in the competition and the final model was an xgboost model 
 
 Here are my learnings:
 
-1. Train-Eval Split: I split train and eval randomly but since test data was out-of-time, out-of-time eval was a better strategy here. Max of Camp_Start_Date in train is 2006-03-30 and min of Camp_Start_Date in test is 2006-04-02. This should have been a clear signal to do out-of-time split. I didnt pay attention to it in the heat of tuning the next model.
-2. Explicit Regularization: On a few submissions, post competition, I discovered that explicit L1, L2 regularization improved the scores.
-3. Blend-Blend-Blend: Or Ensemble-Ensemble-Ensemble or Stack-Stack-Stack. I usually dont do blending of models in any competition. This is because in my work has been deployment focussed which is almost always a single model. But I guess Ive to let go of this a bit and work on model blending approaches for better performance in competitions.
+1. **Train-Eval Split**: I split train and eval randomly but since test data was out-of-time, out-of-time eval was a better strategy here. Max of Camp_Start_Date in train is 2006-03-30 and min of Camp_Start_Date in test is 2006-04-02. This should have been a clear signal to do out-of-time split. I didnt pay attention to it in the heat of tuning the next model.
+2. **Explicit Regularization**: On a few submissions, post competition, I discovered that explicit L1, L2 regularization improved the scores.
+3. **Blend-Blend-Blend**: Or Ensemble-Ensemble-Ensemble or Stack-Stack-Stack. I usually dont do blending of models in any competition. This is because in my work has been deployment focussed which is almost always a single model. But I guess Ive to let go of this a bit and work on model blending approaches for better performance in competitions.
 
 Final version of the model I submitted is shared in this repo. 
 
@@ -25,7 +25,7 @@ Data can be downloaded from the contest page [Janatahack: Healthcare Analytics -
 
 ### Fields in data
 
-Train & Test
+**Train & Test**
 - Patient_ID
 - Health_Camp_ID
 - Registration_Date
@@ -36,7 +36,7 @@ Train & Test
 - Var5
 
 
-Health Camp Detail
+**Health Camp Detail**
 - Health_Camp_ID
 - Camp_Start_Date
 - Camp_End_Date
@@ -45,7 +45,7 @@ Health Camp Detail
 - Category3
 
 
-Patient Profile
+**Patient Profile**
 - Patient_ID
 - Online_Follower
 - LinkedIn_Shared
@@ -59,33 +59,33 @@ Patient Profile
 - Employer_Category
 
 
-First Health Camp Attended
+**First Health Camp Attended**
 - Patient_ID
 - Health_Camp_ID
 - Donation
 - Health_Score
 
 
-Second Health Camp Attended
+**Second Health Camp Attended**
 - Patient_ID
 - Health_Camp_ID
 - Health Score
 
 
-Third Health Camp Attended
+**Third Health Camp Attended**
 - Patient_ID
 - Health_Camp_ID
 - Number_of_stall_visited
 - Last_Stall_Visited_Number
 
 
-Submission
+**Submission**
 - Patient_ID
 - Health_Camp_ID
 - Outcome (to be predicted, a score between 0-1)
 
 
-Additional Features Constructed
+**Additional Features Constructed**
 - Registration_weekday
 - Registration_weekofyear
 - Registration_month
@@ -124,3 +124,8 @@ The best performing model for me was xgboost. The training process is as follows
 - **Train-Eval Split:** Random split for train and eval.
 - **Training:** Trained xgboost with early stopping on eval set.
 - **Final Model:** Trained final model on full data with best iterations learned in previous step.
+
+
+
+PS: I write about Data Science, Machine Learning and AI at [dilbertai.com](https://www.dilbertai.com), where I share ideas and concepts I have learned over the course of my work, summarize research papers I read and practical knowledge I have gained from use cases I have worked on.
+
