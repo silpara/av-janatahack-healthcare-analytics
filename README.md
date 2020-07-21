@@ -115,7 +115,7 @@ Data can be downloaded from the contest page [Janatahack: Healthcare Analytics -
 
 
 ## Models
-[XGBoost](https://github.com/silpara/av-janatahack-healthcare-analytics/blob/master/xgb-av-janatahack-healthcare-analytics-final-submission.ipynb)
+Final submission was an XGBoost model predictions trained using the notebook [av-janatahack-healthcare-analytics](https://github.com/silpara/av-janatahack-healthcare-analytics/blob/master/xgb-av-janatahack-healthcare-analytics-final-submission.ipynb)
 The experimentation largely involved adding features to the model and tuning it for best results on eval set. Model tuning code is not included in the notebook.
 
 
